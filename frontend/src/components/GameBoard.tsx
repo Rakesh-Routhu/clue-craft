@@ -1,4 +1,4 @@
-import { GameState, Player, WordType, PlayerRole, Team } from '../types';
+import { GameState, Player, WordType, PlayerRole } from '../types';
 
 interface GameBoardProps {
   game: GameState;

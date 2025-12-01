@@ -21,7 +21,7 @@ function GamePage() {
     if (!gameId || !playerId) return;
 
     // Connect to socket and join room
-    const socket = socketService.connect();
+    // const socket = socketService.connect();
     socketService.joinRoom(gameId);
 
     // Listen for game updates

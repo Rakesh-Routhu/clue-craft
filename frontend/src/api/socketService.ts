@@ -3,7 +3,7 @@ import { io, Socket } from 'socket.io-client';
 class SocketService {
   private socket: Socket | null = null;
 
-  connect(url: string = 'http://localhost:3001') {
+  connect(url: string = 'https://clue-craft-xpoe.vercel.app') {
     if (!this.socket) {
       this.socket = io(url);
     }
