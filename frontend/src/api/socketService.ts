@@ -2,10 +2,14 @@ import { io, Socket } from 'socket.io-client';
 
 class SocketService {
   private socket: Socket | null = null;
-
+  
   connect(url: string = 'https://clue-craft-xpoe.vercel.app') {
     if (!this.socket) {
-      this.socket = io(url);
+      this.socket = io("https://clue-craft-xpoe.vercel.app", {
+        transports: ["polling", "websocket"], // allow polling first, then upgrade
+        withCredentials: true,
+        autoConnect: true
+      });
     }
     return this.socket;
   }
